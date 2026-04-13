@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Cityline Grand",
+    "city": "Dhaka",
+    "rating": 5,
+    "pricePerNight": 160
+  },
+  {
+    "name": "Harbor View Inn",
+    "city": "Chittagong",
+    "rating": 4,
+    "pricePerNight": 95
+  },
+  {
+    "name": "Riverside Suites",
+    "city": "Sylhet",
+    "rating": 4,
+    "pricePerNight": 120
+  },
+  {
+    "name": "Old Town Residency",
+    "city": "Dhaka",
+    "rating": 3,
+    "pricePerNight": 70
+  }
+]

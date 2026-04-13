@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="container">
+    <h1>Hotel Booking Dashboard</h1>
+    <div class="controls">
+      <input id="searchInput" type="search" placeholder="Search by hotel or city">
+      <select id="cityFilter">
+        <option value="all">All cities</option>
+      </select>
+      <select id="sortSelect">
+        <option value="price-asc">Price low to high</option>
+        <option value="price-desc">Price high to low</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="meta" class="meta"></section>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <h2 class="name"></h2>
+      <p class="info"></p>
+      <p class="price"></p>
+    </article>
+  </template>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
