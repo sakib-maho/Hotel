@@ -19,7 +19,7 @@ and sortable listings backed by JSON data.
 - Data schema test for hotel entries
 - Legacy archives preserved under `legacy/archives/`
 
-## Run Locally
+## Quick Start
 
 ```bash
 python3 -m http.server 8000
@@ -27,7 +27,7 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000`.
 
-## Run Tests
+## Tests
 
 ```bash
 python3 -m unittest discover -s tests -p "test_*.py"
