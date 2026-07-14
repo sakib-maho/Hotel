@@ -1,4 +1,4 @@
-# Hotel Booking Dashboard (Upgraded)
+# Hotel Booking Dashboard
 
 <!-- BrandCloud:readme-standard -->
 [![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
