@@ -1,26 +1,47 @@
 [
   {
-    "name": "Cityline Grand",
-    "city": "Dhaka",
-    "rating": 5,
-    "pricePerNight": 160
+    "id": "h1",
+    "name": "Harborview Inn",
+    "city": "Tokyo",
+    "price": 120,
+    "rating": 4.5,
+    "roomsAvailable": 4,
+    "amenities": ["WiFi", "Breakfast", "Near station"]
   },
   {
-    "name": "Harbor View Inn",
-    "city": "Chittagong",
-    "rating": 4,
-    "pricePerNight": 95
+    "id": "h2",
+    "name": "Sakura Suites",
+    "city": "Osaka",
+    "price": 95,
+    "rating": 4.2,
+    "roomsAvailable": 6,
+    "amenities": ["WiFi", "Kitchenette"]
   },
   {
-    "name": "Riverside Suites",
-    "city": "Sylhet",
-    "rating": 4,
-    "pricePerNight": 120
+    "id": "h3",
+    "name": "Bay Lights Hotel",
+    "city": "Yokohama",
+    "price": 150,
+    "rating": 4.7,
+    "roomsAvailable": 2,
+    "amenities": ["Pool", "Gym", "Sea view"]
   },
   {
-    "name": "Old Town Residency",
-    "city": "Dhaka",
-    "rating": 3,
-    "pricePerNight": 70
+    "id": "h4",
+    "name": "Garden Court",
+    "city": "Tokyo",
+    "price": 80,
+    "rating": 3.9,
+    "roomsAvailable": 8,
+    "amenities": ["WiFi", "Parking"]
+  },
+  {
+    "id": "h5",
+    "name": "Namba Central",
+    "city": "Osaka",
+    "price": 110,
+    "rating": 4.4,
+    "roomsAvailable": 3,
+    "amenities": ["WiFi", "Laundry", "24h desk"]
   }
 ]

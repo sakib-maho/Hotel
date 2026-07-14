@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Booking Dashboard</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="container">
-    <h1>Hotel Booking Dashboard</h1>
-    <div class="controls">
-      <input id="searchInput" type="search" placeholder="Search by hotel or city">
-      <select id="cityFilter">
-        <option value="all">All cities</option>
-      </select>
+  <div class="layout">
+    <header>
+      <h1>Hotel Booking Dashboard</h1>
+      <p class="muted">Search, filter, compare, and book stays locally in your browser.</p>
+    </header>
+
+    <section class="controls card">
+      <input id="searchInput" type="search" placeholder="Search hotel or city…" />
+      <select id="cityFilter"><option value="all">All cities</option></select>
       <select id="sortSelect">
-        <option value="price-asc">Price low to high</option>
-        <option value="price-desc">Price high to low</option>
+        <option value="price-asc">Price ↑</option>
+        <option value="price-desc">Price ↓</option>
+        <option value="rating-desc">Rating ↓</option>
+        <option value="name-asc">Name A–Z</option>
       </select>
-    </div>
-  </header>
+      <label class="check"><input id="favOnly" type="checkbox" /> Favorites only</label>
+    </section>
 
-  <main class="container">
-    <section id="meta" class="meta"></section>
-    <section id="grid" class="grid"></section>
-  </main>
+    <section class="grid">
+      <main>
+        <div id="stats" class="stats muted"></div>
+        <div id="hotelList" class="hotel-list"></div>
+      </main>
+      <aside class="card bookings">
+        <h2>My bookings</h2>
+        <ul id="bookingList"></ul>
+        <p id="bookingEmpty" class="muted">No bookings yet.</p>
+      </aside>
+    </section>
+  </div>
 
-  <template id="cardTemplate">
-    <article class="card">
-      <h2 class="name"></h2>
-      <p class="info"></p>
-      <p class="price"></p>
+  <dialog id="bookingDialog">
+    <form method="dialog" id="bookingForm" class="card">
+      <h3 id="dialogTitle">Book hotel</h3>
+      <label>Check-in <input id="checkIn" type="date" required /></label>
+      <label>Check-out <input id="checkOut" type="date" required /></label>
+      <label>Guests <input id="guests" type="number" min="1" max="8" value="2" required /></label>
+      <p id="bookingError" class="error" hidden></p>
+      <div class="dialog-actions">
+        <button value="cancel" type="submit" class="ghost">Cancel</button>
+        <button id="confirmBook" value="default" type="submit">Confirm</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="hotelTemplate">
+    <article class="card hotel">
+      <div class="hotel-top">
+        <div>
+          <h3 class="name"></h3>
+          <p class="city muted"></p>
+        </div>
+        <button type="button" class="fav-btn" title="Favorite">☆</button>
+      </div>
+      <p class="meta"><span class="price"></span> · <span class="rating"></span>★ · <span class="rooms"></span> rooms</p>
+      <p class="amenities muted"></p>
+      <button type="button" class="book-btn">Book</button>
     </article>
   </template>
 
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js" type="module"></script>
 </body>
 </html>
